@@ -1,0 +1,4 @@
+class test:
+    lamb
+    def do(self):
+        return lamb

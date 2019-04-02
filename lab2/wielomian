@@ -1,0 +1,45 @@
+import copy
+
+class Polynomial:
+
+    def __init__(self, *args):
+        list1 = list(args)
+        self.coef = list1
+
+    def __add__(self, p2):
+        len1 = len(p2)
+        p = copy.copy(self)
+        if(len(self)<len(p2)):
+            len1 = len(self)
+            p = copy.copy(p2)
+        list1 = copy.copy(p.coef)
+        for x in range(-len1, 0):
+            list1[x] = (p2.coef[x] + self.coef[x])
+            p.coef = list1
+        return p
+
+    def __str__(self):
+        len1 = len(self) - 1
+        strin = ""
+        for x in range (0, len1):
+            strin = strin +f"{self.coef[x]}+x^{len1-x}"
+        return strin
+
+
+    # def __zip__(self, p2):
+    #     len1 = len(p2)
+    #     p = copy.copy(self)
+    #     if (len(self) < len(p2)):
+    #         len1 = len(self)
+    #         p = copy.copy(p2)
+    #     for x in range (0, len1):
+
+
+    def __len__(self):
+        return len(self.coef)
+
+
+p1 = Polynomial(1,0,3)
+p2 = Polynomial(1,1)
+print((p1+p2).coef)
+print(str(p1))

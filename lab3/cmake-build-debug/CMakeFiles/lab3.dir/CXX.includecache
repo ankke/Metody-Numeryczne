@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Aneczka/Desktop/studia/INFA/4. semestr/mownit/lab3/sieczne.cpp
+iostream
+-
+cmath
+-
+math.h
+-
+
